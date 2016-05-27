@@ -56,7 +56,8 @@ typedef struct {
 STATIC const PINMUX_GRP_T pinmuxing[] = {
 	{0,  1,  (IOCON_FUNC1 | IOCON_MODE_INACT)},		/* PIO0_1 used for CLKOUT */
 	{0,  2,  (IOCON_FUNC1 | IOCON_MODE_INACT)},		/* PIO0_2 used for SSEL */
-	{0,  3,  (IOCON_FUNC1 | IOCON_MODE_INACT)},		/* PIO0_3 used for USB_VBUS */
+	/* Disable USB_VBUS function because picoCIAA will not enumerate if powered via pci interface */
+	/*{0,  3,  (IOCON_FUNC1 | IOCON_MODE_INACT)},*/		/* PIO0_3 used for USB_VBUS */
 	{0,  4,  (IOCON_FUNC1 | IOCON_SFI2C_EN)},		/* PIO0_4 used for SCL */
 	{0,  5,  (IOCON_FUNC1 | IOCON_SFI2C_EN)},		/* PIO0_5 used for SDA */
 	{0,  6,  (IOCON_FUNC1 | IOCON_MODE_INACT)},		/* PIO0_6 used for USB_CONNECT */
